@@ -1,0 +1,166 @@
+
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Hoşgeldin :)</title>
+<link rel="shortcut icon" href="favicon.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="viewport" content="width=device-width">
+<meta name="robots" content="noindex">
+<link href="style.css" rel="stylesheet" type="text/css" media="all" />
+
+ <script src="jquery.min.js"></script>
+ 
+  <script src="jquery-ui.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+var x = document.cookie;
+if(x){
+window.location="index.html";
+}
+
+
+$('#iletisim').submit(function(){
+
+var data = document.getElementById("password").value;
+
+			document.getElementById('iletisim').reset();
+if(data=="KubrAli"){
+document.cookie = "username=John Doe";
+locat();
+}else{
+data="0";
+$(".overlay").effect("shake");}
+return false;
+    });  
+});
+function locat(){
+window.location.href = "index.html";
+}
+
+
+</script>
+<style>
+/*
+*    RESET
+*/
+*{
+    box-sizing: border-box;
+    margin: 0;
+    outline: none;
+    padding: 0;
+}
+
+*:after,
+*:before {
+    box-sizing: border-box;
+}
+
+/*
+*    GLOBAL
+*/
+html {
+    font-size: 16px;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+}
+
+body {
+background: url(1.jpg)repeat!important;
+color:#fff!important;}
+
+
+
+	form label {
+    display: block;
+    font-size: 1.25em;
+    margin: .75em auto;    
+}
+
+    form input[type="text"],
+    form input[type="email"],
+    form input[type="number"],
+    form input[type="search"],
+    form input[type="password"],
+    form textarea {
+		font-family: Love_and_Passion;
+        background-color: rgb(255,255,255);
+        border: 1px solid rgb( 186, 186, 186 );
+        border-radius: 1px;
+        box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.08);
+        display: block;
+        font-size: .65em;
+        margin: 6px 0 12px 0;
+        padding: .8em .55em;    
+        text-shadow: 0 1px 1px rgba(255, 255, 255, 1);
+        transition: all 400ms ease;
+    }
+    
+    form input[type="text"]:focus,
+    form input[type="email"]:focus,
+    form input[type="number"]:focus,
+    form input[type="search"]:focus,
+    form input[type="password"]:focus,
+    form textarea:focus,
+    form select:focus { 
+	padding:12px 20px 12px 8px;
+		font-family: arial;
+        border-color: #4195fc;
+        box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 0 8px #4195fc;
+    }
+    
+        form input[type="text"]:invalid:focus,
+        form input[type="email"]:invalid:focus,
+        form input[type="number"]:invalid:focus,
+        form input[type="search"]:invalid:focus,
+        form input[type="password"]:invalid:focus,
+        form textarea:invalid:focus,
+        form select:invalid:focus { 
+		padding:12px 20px 12px 8px;
+		font-family: arial;
+            border-color: rgb(248,66,66);
+            box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 0 8px rgb(248,66,66);
+        }
+    
+form input[type="submit"] {
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,.1);
+    color: rgb(210,45,45);
+    font-size: .85em;
+	font-weight:bold;
+    padding: .55em .9em;
+    transition: all 400ms ease;    
+}
+
+    form input[type="submit"]:hover {
+        background-color: rgb(255,65,65);
+		color:#fff;
+        cursor: pointer;
+    }
+</style>
+</head>
+
+<body>
+<img class="heart" src="heart.png">
+<div class="overlay" style="display: block;">
+
+    <div class="login-wrapper">
+        <div class="login-content" id="loginTarget">
+         
+            <b>Giriş Yap</b>
+            <form action="" id="iletisim" name="iletisim">
+                
+                <label for="password">
+                    Parola:
+                    <input type="password" name="sifre" id="password" placeholder="Parola" />
+                </label>
+                <input type="submit" id="btn" class="submit" value="Gir">
+            </form>
+			 <div id="yaz"></div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
